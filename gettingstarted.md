@@ -2,6 +2,14 @@
 
 ### Overall Estimated Duration: 8 Hours
 
+## Lab Scenario
+
+Contoso Ltd. is implementing enterprise-scale AI solutions using Azure OpenAI and Microsoft Foundry services to enhance application intelligence. As AI adoption grows, the organization requires a centralized approach to securely manage, optimize, and govern AI workloads.
+
+In this lab, you will act as an Azure AI Engineer at Contoso and build an **AI Gateway using Azure API Management (APIM)**. You will configure intelligent request routing, manage token usage, enable semantic caching for performance optimization, enforce content safety policies, and securely expose AI services.
+
+By the end of this lab, you will have implemented a scalable, secure, and efficient AI management solution to support Contoso’s enterprise AI operations.
+
 ## Overview
 
 In this hands-on lab, you will build an “AI Gateway”, an integrated AI management environment using Azure API Management (APIM) to interact with Azure OpenAI and other features in Microsoft Foundry. You will configure multi-region traffic routing, enforce token consumption limits, expose MCP tools for secure agent integration, enable semantic caching to improve performance, and apply advanced content safety controls to protect AI interactions.
@@ -90,7 +98,7 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
 
 ## Lab Guide Zoom In/Zoom Out
 
-To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+To adjust the zoom level for the environment page, click the **A↕** icon located next to the timer in the lab environment.
 
 ![Zoom In/Zoom Out](./media/gs-zoomintab.png)  
 

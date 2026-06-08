@@ -2,6 +2,12 @@
 
 ### Estimated Duration: 60 Minutes
 
+## Scenario
+
+Contoso Ltd. requires a scalable solution to efficiently manage increasing AI traffic across multiple regions. To ensure high availability, optimal performance, and consistent user experience, the organization is implementing intelligent traffic management using Azure API Management (APIM).
+
+In this exercise, you will configure load balancing, model routing, and session affinity to optimize and control AI request handling across Azure OpenAI services.
+
 ## Lab Overview
 
 In this exercise, you will learn how to efficiently distribute and manage AI traffic across multiple Azure OpenAI backends using Azure API Management (APIM). You will configure load balancing to route requests between multiple AI endpoints for improved performance and resilience, set up model routing to direct user requests to specific AI models based on task requirements, and implement session affinity to ensure consistent responses across multi-turn conversations. Using Visual Studio Code and Bicep templates, you’ll deploy multi-region Azure resources, configure APIM for intelligent traffic management, and validate that requests are properly balanced, routed, and maintained across sessions.

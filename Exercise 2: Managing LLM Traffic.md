@@ -2,6 +2,12 @@
 
 ### Estimated Duration: 30 Minutes
 
+## Scenario
+
+Contoso Ltd. is experiencing increased usage of its AI-powered applications, leading to higher token consumption and cost concerns. To ensure efficient resource utilization and maintain performance, the organization needs better visibility and control over AI traffic.
+
+In this exercise, you will implement monitoring and governance using Azure API Management (APIM) by capturing token usage metrics and applying rate-limiting policies to optimize and control LLM consumption.
+
 ## Lab Overview
 
 In this exercise, you will manage and optimize Large Language Model (LLM) traffic using Azure API Management (APIM) and Microsoft Foundry. You will first capture and analyze token usage metrics from API requests to monitor consumption trends and identify spikes in activity. Then, you will apply token rate-limiting policies using APIM to control traffic and prevent overuse of Azure OpenAI resources. Using Visual Studio Code and Bicep templates, you will deploy the required infrastructure, run tests with Python SDKs, and visualize token data in Application Insights. Confirm that token usage metrics are emitted correctly and that rate-limiting policies enforce consumption limits effectively.

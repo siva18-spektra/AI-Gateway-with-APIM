@@ -2,6 +2,12 @@
 
 ### Estimated Duration: 60 Minutes
 
+## Scenario
+
+Contoso Ltd. is optimizing its AI applications to improve response time and reduce operational costs. With repeated and similar user queries, the organization requires an efficient mechanism to reuse responses and minimize unnecessary API calls.
+
+In this exercise, you will implement semantic caching in the AI Gateway to enhance performance by serving responses for semantically similar queries, reducing latency and token consumption.
+
 ## Lab Overview 
 
 In this exercise, you will implement semantic caching in the AI Gateway to optimize the performance of Azure OpenAI applications. You will configure caching based on semantic similarity rather than exact text matching, allowing the system to reuse responses for prompts with similar meanings. Using Visual Studio Code, you will deploy the required resources with Bicep templates, initialize environment variables, and analyze cache performance using Redis metrics and Python SDK calls. Verify that semantically similar prompts return cached results to confirm reduced latency, improved response times, and lower API token usage.

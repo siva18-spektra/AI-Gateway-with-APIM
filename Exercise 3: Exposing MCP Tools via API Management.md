@@ -2,6 +2,12 @@
 
 ### Estimated Duration: 60 Minutes
 
+## Scenario
+
+Contoso Ltd. is extending its AI capabilities by enabling AI agents to securely interact with external systems and enterprise services. To achieve this, the organization needs a centralized and governed approach to expose backend tools and APIs.
+
+In this exercise, you will use Azure API Management (APIM) to expose MCP servers and REST APIs as secure tools, and implement client authorization to ensure controlled and secure access to AI-integrated services.
+
 ## Lab Overview
 
 In this exercise, you will learn how to expose Model Context Protocol (MCP) tools and servers through Azure API Management (APIM) to securely integrate AI agents with backend services. MCP allows large language models (LLMs) to interact with external tools and data sources in a structured, governed way. Through this lab, you will explore how to configure API Management as a central gateway for MCP-based communication, enabling features such as rate limiting, OAuth-based authentication, and secure token handling. You’ll also learn how to publish REST APIs as MCP tools, connect AI agents to MCP endpoints, and test end-to-end authorization flows with Microsoft Entra ID. By the end of this exercise, you will understand how to expose, secure, and manage MCP servers and REST APIs using Azure’s enterprise-grade management and security capabilities.
