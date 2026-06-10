@@ -1,6 +1,6 @@
 # Exercise 2: Managing LLM Traffic
 
-### Estimated Duration: 30 Minutes
+### Estimated Duration: 75 Minutes
 
 ## Scenario
 
@@ -10,7 +10,7 @@ In this exercise, you will implement monitoring and governance using Azure API M
 
 ## Lab Overview
 
-In this exercise, you will manage and optimize Large Language Model (LLM) traffic using Azure API Management (APIM) and Microsoft Foundry. You will first capture and analyze token usage metrics from API requests to monitor consumption trends and identify spikes in activity. Then, you will apply token rate-limiting policies using APIM to control traffic and prevent overuse of Azure OpenAI resources. Using Visual Studio Code and Bicep templates, you will deploy the required infrastructure, run tests with Python SDKs, and visualize token data in Application Insights. Confirm that token usage metrics are emitted correctly and that rate-limiting policies enforce consumption limits effectively.
+In this exercise, you will manage and optimize Large Language Model (LLM) traffic using Azure API Management (APIM) and Microsoft Foundry. You will first capture and analyze token usage metrics from API requests to monitor consumption trends and identify spikes in activity. Then, you will apply token rate-limiting policies using APIM to control traffic and prevent overuse of Microsoft Foundry resources. Using Visual Studio Code and Bicep templates, you will deploy the required infrastructure, run tests with Python SDKs, and visualize token data in Application Insights. Confirm that token usage metrics are emitted correctly and that rate-limiting policies enforce consumption limits effectively.
 
 ## Lab Objectives
 
@@ -46,7 +46,7 @@ In this task, you will deploy APIM and Microsoft Foundry endpoints, set up model
 
    - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
 
-      >**Note:** Ensure that the correct name is entered in the respective section.
+      >### **Note:** <span style="color:maroon;"> Ensure that the correct name is entered in the respective section.
 
 1. Run the cell **Initialize notebook variables**. Prepare the environment, define resources, models, and subscriptions so everything is ready for deployment.
 
@@ -60,7 +60,7 @@ In this task, you will deploy APIM and Microsoft Foundry endpoints, set up model
 
    ![](./media/ver-e2t1.png)
    
-3. Run the cell **Create deployment using 🦾 Bicep**. This cell automates the creation of APIM, AI Foundry endpoints, and model deployments so that the environment is consistent and reproducible.
+3. Run the cell **Create deployment using 🦾 Bicep**. This cell automates the creation of APIM, Microsoft Foundry endpoints, and model deployments so that the environment is consistent and reproducible.
 
    ![](./media/deploy-e2t1.png)
 
@@ -76,7 +76,7 @@ In this task, you will deploy APIM and Microsoft Foundry endpoints, set up model
 
    ![](./media/test-e2t1(1).png)
 
-6. Run the cell **Execute multiple runs for each subscription using the Azure OpenAI Python SDK**. Verify that metrics are tracked consistently across multiple subscriptions and API keys using the official Azure OpenAI SDK.
+6. Run the cell **Execute multiple runs for each subscription using the Microsoft Foundry Python SDK**. Verify that metrics are tracked consistently across multiple subscriptions and API keys using the official Microsoft Foundry SDK.
 
    ![](./media/execute-e2t1.png)
 
@@ -133,7 +133,7 @@ In this task, you will deploy APIM and Microsoft Foundry endpoints, set up model
 
 ## Task 2: Apply rate-limiting policies to control token consumption
 
-In this task, you will deploy APIM, AI Foundry endpoints, and model subscriptions, and configure token rate-limiting policies. You will test API requests, monitor token usage, and verify that the rate limiting enforces consumption limits correctly.
+In this task, you will deploy APIM, Microsoft Foundry endpoints, and model subscriptions, and configure token rate-limiting policies. You will test API requests, monitor token usage, and verify that the rate limiting enforces consumption limits correctly.
 
 1. In Visual Studio Code, from the left navigation pane, select **Explorer (1)**, then expand the **lab (2)** folder and select **token-rate-limiting (3)**, and click on **token-rate-limiting.ipynb (4)**.
 
@@ -157,7 +157,7 @@ In this task, you will deploy APIM, AI Foundry endpoints, and model subscription
 
    - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
 
-      >**Note:** Ensure that the correct name is entered in the respective section.
+      >### **Note:** <span style="color:maroon;">Ensure that the correct name is entered in the respective section.
 
 1. Run the cell **Initialize Notebook Variables**. This set up all lab variables, including resource group, location, AI services, models, APIM SKU, subscriptions, API paths, and utility functions. Prepares the environment for deployment.
 
@@ -171,7 +171,7 @@ In this task, you will deploy APIM, AI Foundry endpoints, and model subscription
    
    ![](./media/ver-e2t2.png)
 
-2. Run the cell **Create Deployment Using Bicep**. Deploy APIM, AI Foundry endpoints, and model subscriptions using Bicep. Automates resource provisioning and writes parameters to params.json.
+2. Run the cell **Create Deployment Using Bicep**. Deploy APIM, Microsoft Foundry endpoints, and model subscriptions using Bicep. Automates resource provisioning and writes parameters to params.json.
 
    ![](./media/deploy-e2t2.png)
 
@@ -191,13 +191,13 @@ In this task, you will deploy APIM, AI Foundry endpoints, and model subscription
 
    >**Note:** Result you get may vary from the image above.
 
-6. Run the cell **Test the API Using Azure OpenAI Python SDK**. Send requests using the Azure OpenAI SDK to confirm retries and proper handling of token limits. Observes consistent behavior across SDK calls.
+6. Run the cell **Test the API Using Microsoft Foundry Python SDK**. Send requests using the Microsoft Foundry SDK to confirm retries and proper handling of token limits. Observes consistent behavior across SDK calls.
 
    ![](./media/test2-e2t2.png)
 
 ## Summary
 
-In this exercise, you learned how to monitor and control LLM traffic through Azure API Management. You deployed APIM and AI Foundry endpoints, captured token usage metrics, and visualized consumption patterns in Application Insights. You then configured and tested token rate-limiting policies to ensure that excessive requests were throttled and token quotas were enforced consistently. By the end of the lab, you verified that token metrics were accurately tracked across multiple subscriptions and that APIM effectively regulated model access, ensuring predictable usage, improved cost management, and stable performance for Azure OpenAI workloads.
+In this exercise, you learned how to monitor, analyze, and control LLM traffic using Azure API Management and Microsoft Foundry. You deployed the required infrastructure, captured token usage metrics, and visualized consumption patterns in Application Insights. By executing requests through multiple APIM subscriptions (subscription keys), you gained visibility into token consumption across different applications or consumers, enabling more effective usage tracking and governance. You also configured and validated token rate-limiting policies to ensure excessive requests were throttled and consumption limits were enforced consistently. By the end of the exercise, you verified that APIM could effectively monitor usage, govern access, optimize costs, and maintain reliable performance for Microsoft Foundry workloads at scale.
 
 ### You have successfully completed the exercise. Click on **Next >>** to proceed with the next exercise.
 

@@ -31,10 +31,11 @@ This lab introduces participants to semantic caching to improve AI response time
 
 ## Prerequisites
 
-Participants should have basic knowledge and understanding of the following:
- 
- - Azure Portal
- - Microsoft Foundry Portal 
+- Basic understanding of Azure Portal, Microsoft Foundry, Azure resource management, and Azure API Management (APIM).
+- Familiarity with REST APIs, JSON payloads, and API authentication concepts.
+- Knowledge of Azure OpenAI, Generative AI concepts, Large Language Models (LLMs), and token consumption.
+- Basic understanding of Python, Jupyter Notebooks, and monitoring concepts such as Application Insights is recommended.
+- Access to an Azure subscription with Owner privileges to deploy, configure, and manage the resources required for the lab(Provided).
 
 ## Architecture
 

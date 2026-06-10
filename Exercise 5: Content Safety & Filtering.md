@@ -1,6 +1,6 @@
 # Exercise 5: Content Safety & Filtering 
 
-### Estimated Duration: 30 Minutes
+### Estimated Duration: 75 Minutes
 
 ## Scenario
 
@@ -16,13 +16,13 @@ In this exercise, you will implement content safety and moderation controls with
 
 In this exercise, you will be performing the following tasks:
 
-- Task 1: Review content safety capabilities and configuration in AI Foundry
+- Task 1: Review content safety capabilities and configuration in Microsoft Foundry
 
 - Task 2: Specify content filters at request time using headers
 
 - Task 3: Apply content safety enforcement rules in API Management 
 
-## Task 1: Review content safety capabilities and configuration in AI Foundry
+## Task 1: Review content safety capabilities and configuration in Microsoft Foundry
 
 In this task, you will explore and test the various content safety capabilities available in Microsoft Foundry, including text, image, and multimodal moderation, groundedness detection, prompt shields, and protected material detection.
 
@@ -64,7 +64,6 @@ These AI-powered features help organizations detect risks, prevent the spread of
     > ![](./media/ex5task2-01.png)
     >
     >![](./media/ex5task2-02.png)
-
 
 1. From the left navigation pane on the Microsoft Foundry portal, select **Guardrails + controls**.
 
@@ -260,9 +259,9 @@ In this task, you will configure and validate the Content Safety policy in the A
 
    - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
 
-        >**Note:** Ensure that the correct name is entered in the respective section.
+        >### **Note:**<span style="color:maroon;"> Ensure that the correct name is entered in the respective section.
 
-1. Run the cell **Initialize notebook variables**. This cell imports necessary Python utilities and environment setup scripts. Configures resource names using your Azure subscription ID. Sets region, AI Foundry configuration, model details, and deployment parameters.
+1. Run the cell **Initialize notebook variables**. This cell imports necessary Python utilities and environment setup scripts. Configures resource names using your Azure subscription ID. Sets region, Microsoft Foundry configuration, model details, and deployment parameters.
 
     ![](./media/apim-may26-e5t3p1.png)
 
@@ -276,7 +275,7 @@ In this task, you will configure and validate the Content Safety policy in the A
 
     ![](./media/ver-e5t3.png)
 
-1. Next, go to **Create deployment using 🦾 Bicep** and **Run** the cell to automatically deploy all required resources, including Azure API Management, Azure OpenAI, and Azure AI Content Safety. The Bicep template ensures declarative and repeatable deployment of these services within the specified resource group.
+1. Next, go to **Create deployment using 🦾 Bicep** and **Run** the cell to automatically deploy all required resources, including Azure API Management, Microsoft Foundry, and Azure AI Content Safety. The Bicep template ensures declarative and repeatable deployment of these services within the specified resource group.
 
     ![](./media/deploy-e5t3.png)
 
@@ -298,7 +297,7 @@ In this exercise, you learned how Azure AI Content Safety protects both user inp
 
 ### Conclusion
 
-By completing the **Azure AI Gateway: API Management for Intelligent Services** hands-on lab, you have built a comprehensive understanding of how to design, secure, optimize, and operate enterprise-grade AI workloads using Azure API Management and Azure OpenAI. You configured intelligent load balancing, model routing, and session affinity to create a scalable and highly available AI Gateway. You monitored and controlled LLM usage through token tracking and rate-limiting policies, ensuring predictable consumption and cost efficiency. You integrated Model Context Protocol (MCP) tools, secured them with Microsoft Entra ID, and enabled seamless, authenticated interaction between AI agents and backend systems. You further enhanced performance by implementing semantic caching to reduce latency and improve efficiency, and finally, you applied Azure AI Content Safety to enforce robust guardrails that protect both users and AI systems from harmful or unsafe content.
+By completing the **Azure AI Gateway: API Management for Intelligent Services** hands-on lab, you have built a comprehensive understanding of how to design, secure, optimize, and operate enterprise-grade AI workloads using Azure API Management and Microsoft Foundry. You configured intelligent load balancing, model routing, and session affinity to create a scalable and highly available AI Gateway. You monitored and controlled LLM usage through token tracking and rate-limiting policies, ensuring predictable consumption and cost efficiency. You integrated Model Context Protocol (MCP) tools, secured them with Microsoft Entra ID, and enabled seamless, authenticated interaction between AI agents and backend systems. You further enhanced performance by implementing semantic caching to reduce latency and improve efficiency, and finally, you applied Azure AI Content Safety to enforce robust guardrails that protect both users and AI systems from harmful or unsafe content.
 
 Through this end-to-end experience, you have gained practical, production-ready skills in building intelligent, reliable, and secure AI gateways on Azure demonstrating how modern AI services can be orchestrated effectively to support large-scale, real-world enterprise applications.
 

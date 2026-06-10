@@ -1,6 +1,6 @@
 # Exercise 4: Semantic Caching for Performance Optimization 
 
-### Estimated Duration: 60 Minutes
+### Estimated Duration: 75 Minutes
 
 ## Scenario
 
@@ -10,7 +10,7 @@ In this exercise, you will implement semantic caching in the AI Gateway to enhan
 
 ## Lab Overview 
 
-In this exercise, you will implement semantic caching in the AI Gateway to optimize the performance of Azure OpenAI applications. You will configure caching based on semantic similarity rather than exact text matching, allowing the system to reuse responses for prompts with similar meanings. Using Visual Studio Code, you will deploy the required resources with Bicep templates, initialize environment variables, and analyze cache performance using Redis metrics and Python SDK calls. Verify that semantically similar prompts return cached results to confirm reduced latency, improved response times, and lower API token usage.
+In this exercise, you will implement semantic caching in the AI Gateway to optimize the performance of Microsoft Foundry applications. You will configure caching based on semantic similarity rather than exact text matching, allowing the system to reuse responses for prompts with similar meanings. Using Visual Studio Code, you will deploy the required resources with Bicep templates, initialize environment variables, and analyze cache performance using Redis metrics and Python SDK calls. Verify that semantically similar prompts return cached results to confirm reduced latency, improved response times, and lower API token usage.
 
 ## Lab Objectives
 
@@ -26,10 +26,10 @@ In this task, you will learn how semantic caching enhances AI performance by com
 
 ### Introduction
 
-Semantic caching is an advanced caching technique that improves the performance and efficiency of large language model (LLM) applications, such as those using Azure OpenAI.
+Semantic caching is an advanced caching technique that improves the performance and efficiency of large language model (LLM) applications, such as those using Microsoft Foundry.
 Unlike traditional caching, which matches requests based on exact text or URLs, semantic caching uses meaning (semantics) to identify whether two queries are similar enough to reuse a previous response.
 
-This approach enables faster responses, lower latency, and reduced token consumption by avoiding redundant calls to the backend Azure OpenAI service.
+This approach enables faster responses, lower latency, and reduced token consumption by avoiding redundant calls to the backend Microsoft Foundry service.
 
 ### How Semantic Caching Works
 
@@ -60,7 +60,7 @@ This approach enables faster responses, lower latency, and reduced token consump
 
 - Reduces latency: Cached responses are returned almost instantly.
 
-- Lowers token costs: Avoids unnecessary calls to Azure OpenAI models.
+- Lowers token costs: Avoids unnecessary calls to Microsoft Foundry models.
 
 - Improves scalability: Decreases backend workload and bandwidth usage.
 
@@ -112,9 +112,9 @@ Enter the following details:
 
    - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
 
-      >**Note:** Ensure that the correct name is entered in the respective section.
+      >### **Note:**<span style="color:maroon;"> Ensure that the correct name is entered in the respective section.
 
-1. **Run** the cell **Initialize notebook variables**. This step sets up environment variables for the deployment, including the resource group name, region, AI Foundry configuration, OpenAI model details, Redis cache SKU, and API Management parameters. These variables ensure consistent and automated deployments across regions and subscriptions.
+1. **Run** the cell **Initialize notebook variables**. This step sets up environment variables for the deployment, including the resource group name, region, Microsoft Foundry configuration, OpenAI model details, Redis cache SKU, and API Management parameters. These variables ensure consistent and automated deployments across regions and subscriptions.
 
     ![](./media/apim-may26-e4t2p1.png)
 
@@ -122,7 +122,7 @@ Enter the following details:
 
    ![](./media/ver-e4t1.png)
 
-1. Run **Create deployment using 🦾 Bicep**. Here, the Bicep template automatically deploys all required resources, including APIM, Azure OpenAI models, and Managed Redis Cache into the resource group. The parameters are dynamically generated and written to a JSON file before executing the deployment command.
+1. Run **Create deployment using 🦾 Bicep**. Here, the Bicep template automatically deploys all required resources, including APIM, Microsoft Foundry models, and Managed Redis Cache into the resource group. The parameters are dynamically generated and written to a JSON file before executing the deployment command.
 
     ![](./media/deploy-e4t1.png)
 
@@ -148,7 +148,7 @@ Enter the following details:
     
     ![](./media/outputs-e4t1.png)
 
-1. Run **Make multiple calls using the Azure OpenAI Python SDK**. This section sends multiple requests with semantically similar prompts (e.g., different ways of asking about coffee making) to test caching behavior. The first call is slower since it reaches the backend model, while subsequent ones are faster as they are served from the cache.
+1. Run **Make multiple calls using the Microsoft Foundry Python SDK**. This section sends multiple requests with semantically similar prompts (e.g., different ways of asking about coffee making) to test caching behavior. The first call is slower since it reaches the backend model, while subsequent ones are faster as they are served from the cache.
 
    ![](./media/make-e4t1.png)
 
@@ -173,8 +173,8 @@ Enter the following details:
 
 ## Summary 
 
-In this exercise, you explored how semantic caching improves the efficiency and cost-effectiveness of Azure OpenAI-based solutions by reusing results for prompts with similar meanings. You learned how embeddings allow AI systems to detect semantic similarity between queries, enabling cached responses to be served instantly rather than reprocessed by the model. By deploying semantic caching within the AI Gateway, you observed measurable improvements in response latency and cache hit rates, confirming that repeated or related queries can be served from cache rather than through new model invocations. You also reviewed Redis cache statistics to understand how cache hits, misses, and evictions reflect real-world performance optimization.
-Through this hands-on implementation, you gained practical insights into how semantic caching supports faster, more scalable, and more cost-efficient AI applications, a key optimization strategy for production-grade Azure OpenAI deployments.
+In this exercise, you explored how semantic caching improves the efficiency and cost-effectiveness of Microsoft Foundry-based solutions by reusing results for prompts with similar meanings. You learned how embeddings allow AI systems to detect semantic similarity between queries, enabling cached responses to be served instantly rather than reprocessed by the model. By deploying semantic caching within the AI Gateway, you observed measurable improvements in response latency and cache hit rates, confirming that repeated or related queries can be served from cache rather than through new model invocations. You also reviewed Redis cache statistics to understand how cache hits, misses, and evictions reflect real-world performance optimization.
+Through this hands-on implementation, you gained practical insights into how semantic caching supports faster, more scalable, and more cost-efficient AI applications, a key optimization strategy for production-grade Microsoft Foundry deployments.
 
 ### You have successfully completed the exercise. Click on Next >> to proceed with the next exercise.
 

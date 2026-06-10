@@ -1,6 +1,6 @@
 # Exercise 3: Exposing MCP Tools via API Management 
 
-### Estimated Duration: 60 Minutes
+### Estimated Duration: 120 Minutes
 
 ## Scenario
 
@@ -51,9 +51,9 @@ In this task, you will expose existing MCP (Model Context Protocol) servers thro
 
    - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
 
-        >**Note:** Ensure that the correct name is entered in the respective section.
+        >### **Note:**<span style="color:maroon;"> Ensure that the correct name is entered in the respective section.
 
-1. **Run** the cell **Initialize notebook variables**. This step initializes environment variables used for the entire deployment. It defines resource group names, Azure region, container registry, deployment identifiers, AI Foundry configuration, and APIM settings.
+1. **Run** the cell **Initialize notebook variables**. This step initializes environment variables used for the entire deployment. It defines resource group names, Azure region, container registry, deployment identifiers, Microsoft Foundry configuration, and APIM settings.
 
     ![](./media/apim-may26-e3t1p1.png)
 
@@ -99,7 +99,7 @@ In this task, you will expose existing MCP (Model Context Protocol) servers thro
 
     ![](./media/ex3-t1p2.png)
 
-1. Run the command below **(1)** in PowerShell. When prompted to install the required package, type `y` **(2)** and press **Enter** to proceed.
+1. Run the command below **(1)** to launch MCP Inspector, a browser-based tool used to test, debug, and validate MCP servers. It enables you to connect to MCP endpoints, view available tools, and execute tool calls before integrating them with AI agents. When prompted to install the required package, type **y (2)** and press Enter.
 
     ```
     npx @modelcontextprotocol/inspector
@@ -203,7 +203,7 @@ In this task, you will deploy and test the Model Context Protocol (MCP) using Az
 
    - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
 
-        >**Note:** Ensure that the correct name is entered in the respective section.
+        >### **Note:**<span style="color:maroon;"> Ensure that the correct name is entered in the respective section.
 
 1. **Run** the cell **Initialize notebook variables** to set up environment variables. This step defines your resource names, Azure region, and other configuration details required for consistent and automated deployment across subscriptions.
 
@@ -213,7 +213,7 @@ In this task, you will deploy and test the Model Context Protocol (MCP) using Az
     >
     >![](./media/apim-p2t1p2-new.png)
 
-1. Next, scroll down to **Create deployment using 🦾 Bicep** and **Run** the cell to deploy all required Azure resources. The Bicep template provisions services like Azure API Management, Azure OpenAI, and related components needed for the MCP setup. Wait for the deployment process to complete successfully. The cell output will show status messages confirming that the resource group, API Management instance, and supporting components were created.
+1. Next, scroll down to **Create deployment using 🦾 Bicep** and **Run** the cell to deploy all required Azure resources. The Bicep template provisions services like Azure API Management, Microsoft Foundry, and related components needed for the MCP setup. Wait for the deployment process to complete successfully. The cell output will show status messages confirming that the resource group, API Management instance, and supporting components were created.
 
     ![](./media/deploy-e3t2.png)
 
@@ -227,7 +227,7 @@ In this task, you will deploy and test the Model Context Protocol (MCP) using Az
 
     ![](./media/test-e3t2.png)
 
-1. Next, scroll down to **Execute an Azure AI Foundry Agent using MCP Tools** and **Run** the cell to demonstrate how an Azure AI Agent can use MCP tools published via API Management. This step sets up an asynchronous connection between Azure OpenAI, MCPServerStreamableHttp, and the deployed MCP endpoints, allowing the AI Agent to invoke tools exposed through APIM. You can observe the agent interacting with MCP tools, retrieving data, or performing operations through the configured MCP service.
+1. Next, scroll down to **Execute an Azure Microsoft Foundry Agent using MCP Tools** and **Run** the cell to demonstrate how an Azure AI Agent can use MCP tools published via API Management. This step sets up an asynchronous connection between Microsoft Foundry, MCPServerStreamableHttp, and the deployed MCP endpoints, allowing the AI Agent to invoke tools exposed through APIM. You can observe the agent interacting with MCP tools, retrieving data, or performing operations through the configured MCP service.
 
     ![](./media/execute-e3t2.png)
 
@@ -288,7 +288,7 @@ In this lab, you will configure and test the Model Context Protocol (MCP) client
 
    - app_registration_name: **mcp-app-registration-<inject key="DeploymentID" enableCopy="false"/>**
 
-        >**Note:** Ensure that the correct name is entered in the respective section.
+        >### **Note:**<span style="color:maroon;"> Ensure that the correct name is entered in the respective section.
 
 1. **Run** the cell **Initialize notebook variables**. This step initializes the core environment variables for your deployment, including the resource group name, deployment identifiers, subscription details, and Azure region configuration.
 

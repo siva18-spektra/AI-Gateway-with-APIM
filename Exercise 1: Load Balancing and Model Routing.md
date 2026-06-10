@@ -6,11 +6,11 @@
 
 Contoso Ltd. requires a scalable solution to efficiently manage increasing AI traffic across multiple regions. To ensure high availability, optimal performance, and consistent user experience, the organization is implementing intelligent traffic management using Azure API Management (APIM).
 
-In this exercise, you will configure load balancing, model routing, and session affinity to optimize and control AI request handling across Azure OpenAI services.
+In this exercise, you will configure load balancing, model routing, and session affinity to optimize and control AI request handling across Microsoft Foundry-hosted model endpoints.
 
 ## Lab Overview
 
-In this exercise, you will learn how to efficiently distribute and manage AI traffic across multiple Azure OpenAI backends using Azure API Management (APIM). You will configure load balancing to route requests between multiple AI endpoints for improved performance and resilience, set up model routing to direct user requests to specific AI models based on task requirements, and implement session affinity to ensure consistent responses across multi-turn conversations. Using Visual Studio Code and Bicep templates, you’ll deploy multi-region Azure resources, configure APIM for intelligent traffic management, and validate that requests are properly balanced, routed, and maintained across sessions.
+In this exercise, you will learn how to efficiently distribute and manage AI traffic across multiple Microsoft Foundry model endpoints backends using Azure API Management (APIM). You will configure load balancing to route requests between multiple AI endpoints for improved performance and resilience, set up model routing to direct user requests to specific AI models based on task requirements, and implement session affinity to ensure consistent responses across multi-turn conversations. Using Visual Studio Code and Bicep templates, you’ll deploy multi-region Azure resources, configure APIM for intelligent traffic management, and validate that requests are properly balanced, routed, and maintained across sessions.
 
 ## Lab Objectives
 In this exercise, you will be performing the following tasks:
@@ -23,7 +23,7 @@ In this exercise, you will be performing the following tasks:
 
 ## Task 1: Configure load balancing across AOAI resource pools
 
-In this task, you will learn how to distribute incoming AI requests across multiple Azure OpenAI (AOAI) endpoints deployed in different regions. You will configure Azure API Management (APIM) to intelligently route traffic, ensuring high availability, efficient utilization of resources, and seamless failover when one endpoint reaches capacity or becomes unavailable.
+In this task, you will learn how to distribute incoming AI requests across multiple Azure OpenAI (AOAI) endpoints deployed in Microsoft Foundry in different regions. You will configure Azure API Management (APIM) to intelligently route traffic, ensuring high availability, efficient utilization of resources, and seamless failover when one endpoint reaches capacity or becomes unavailable.
 
 ### Architecture Diagram
 
@@ -216,7 +216,7 @@ Here’s the architecture diagram to help you better understand the scenario.
 
 ## Task 2: Set up model routing for directing requests to different models
 
-In this task, you will configure APIM to route incoming requests to the appropriate Azure OpenAI model based on predefined model mappings. You’ll initialize model and service configurations, deploy routing rules using Bicep, and test the setup to verify that each request is correctly directed to its designated backend model.
+In this task, you will configure APIM to route incoming requests to the appropriate Azure OpenAI model in Microsoft Foundry based on predefined model mappings. You’ll initialize model and service configurations, deploy routing rules using Bicep, and test the setup to verify that each request is correctly directed to its designated backend model.
 
 1. In Visual Studio Code, from the left navigation pane, select **Explorer (1)**, then expand **model-routing (2)** click on **model-routing.ipynb (3)**.
 
@@ -298,7 +298,7 @@ At the end, all resource identifiers and API keys are available for testing the 
 
 ## Task 3: Implement session affinity to keep responses consistent for agent interactions
 
-In this task, you will deploy and validate a multi-region Azure setup using Bicep and API Management. You will initialize configuration variables, verify your Azure CLI connection, deploy AI Foundry instances and an API Management gateway, and then test how session affinity affects conversation continuity across backends. By the end, you will see how enabling cookie-based affinity ensures requests from the same client maintain a consistent state across sessions.
+In this task, you will deploy and validate a multi-region Azure setup using Bicep and API Management. You will initialize configuration variables, verify your Azure CLI connection, deploy Microsoft Foundry instances and an API Management gateway, and then test how session affinity affects conversation continuity across backends. By the end, you will see how enabling cookie-based affinity ensures requests from the same client maintain a consistent state across sessions.
 
 1. In Visual Studio Code, under **labs (1)** folder, expand **session-awareness (1)** and then click on **session-awareness.ipynb (2)**.
 
@@ -340,13 +340,13 @@ In this task, you will deploy and validate a multi-region Azure setup using Bice
 
    ![](./media/e1t3p3.png)
 
-1. Run the **Create deployment using 🦾 Bicep** cell to deploy all required Azure resources using a Bicep template. This cell creates the resource group (if it doesn’t exist), generates deployment parameters, and provisions two AI Foundry instances, a GPT-4o-mini model in each, an API Management instance, and a backend pool. It sets up the initial environment for the lab, which you’ll later update to enable session affinity.
+1. Run the **Create deployment using 🦾 Bicep** cell to deploy all required Azure resources using a Bicep template. This cell creates the resource group (if it doesn’t exist), generates deployment parameters, and provisions two Microsoft Foundry instances, a GPT-4o-mini model in each, an API Management instance, and a backend pool. It sets up the initial environment for the lab, which you’ll later update to enable session affinity.
 
    ![](./media/deploy-e1t3.png)
 
    >**Note**: If you encounter any errors, wait a few minutes and then re-execute the cell.
 
-1. Run the **Get the deployment outputs** cell to retrieve details from the completed Bicep deployment. This cell fetches key outputs such as the API Management gateway URL, service name, subscription keys, and deployed AI Foundry instances. It verifies that all resources were successfully created and confirms readiness for testing session affinity in later steps.
+1. Run the **Get the deployment outputs** cell to retrieve details from the completed Bicep deployment. This cell fetches key outputs such as the API Management gateway URL, service name, subscription keys, and deployed Microsoft Foundry instances. It verifies that all resources were successfully created and confirms readiness for testing session affinity in later steps.
 
    ![](./media/outputs-e1t3.png)
 
@@ -376,7 +376,7 @@ In this task, you will deploy and validate a multi-region Azure setup using Bice
 
 ## Summary
 
-In this exercise, you successfully configured load balancing, model routing, and session affinity for Azure OpenAI endpoints using Azure API Management. You deployed multiple AI backends across regions, verified that APIM evenly distributed traffic among available endpoints, and confirmed that routing rules correctly directed requests to specific models. Finally, you enabled session affinity to maintain conversation context by ensuring that requests from the same client were consistently routed to the same backend. By completing this lab, you gained hands-on experience in designing a scalable, reliable, and context-aware AI Gateway capable of handling large-scale workloads while maintaining high availability and consistent AI interactions.
+In this exercise, you successfully configured load balancing, model routing, and session affinity for Azure OpenAI endpoints in Microsoft Foundry using Azure API Management. You deployed multiple AI backends across regions, verified that APIM evenly distributed traffic among available endpoints, and confirmed that routing rules correctly directed requests to specific models. Finally, you enabled session affinity to maintain conversation context by ensuring that requests from the same client were consistently routed to the same backend. By completing this lab, you gained hands-on experience in designing a scalable, reliable, and context-aware AI Gateway capable of handling large-scale workloads while maintaining high availability and consistent AI interactions.
 
 ### You have successfully completed the exercise. Click on **Next >>** to proceed with the next exercise.
 
