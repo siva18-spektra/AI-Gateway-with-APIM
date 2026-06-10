@@ -4,27 +4,27 @@
     "Language": "English",
     "Files": [
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/AI-Gateway-with-APIM/refs/heads/main/gettingstarted.md",
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/AI-Gateway-with-APIM/refs/heads/main/gettingstarted.md",
         "Order": 1
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/AI-Gateway-with-APIM/refs/heads/main/Exercise%201%3A%20Load%20Balancing%20and%20Model%20Routing.md",
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/AI-Gateway-with-APIM/refs/heads/main/Exercise%201%3A%20Load%20Balancing%20and%20Model%20Routing.md",
         "Order": 2
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/AI-Gateway-with-APIM/refs/heads/main/Exercise%202%3A%20Managing%20LLM%20Traffic.md",
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/AI-Gateway-with-APIM/refs/heads/main/Exercise%202%3A%20Managing%20LLM%20Traffic.md",
         "Order": 3
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/AI-Gateway-with-APIM/refs/heads/main/Exercise%203%3A%20Exposing%20MCP%20Tools%20via%20API%20Management.md",
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/AI-Gateway-with-APIM/refs/heads/main/Exercise%203%3A%20Exposing%20MCP%20Tools%20via%20API%20Management.md",
         "Order": 4
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/AI-Gateway-with-APIM/refs/heads/main/Exercise%204%3A%20Semantic%20Caching%20for%20Performance%20Optimization.md",
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/AI-Gateway-with-APIM/refs/heads/main/Exercise%204%3A%20Semantic%20Caching%20for%20Performance%20Optimization.md",
         "Order": 5
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/AI-Gateway-with-APIM/refs/heads/main/Exercise%205%3A%20Content%20Safety%20%26%20Filtering.md",
+        "RawFilePath": https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/AI-Gateway-with-APIM/refs/heads/main/Exercise%205%3A%20Content%20Safety%20%26%20Filtering.md",
         "Order": 6
       }
     ]
