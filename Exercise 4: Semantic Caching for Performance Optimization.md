@@ -93,7 +93,7 @@ In this task, you will configure and test semantic caching within the AI Gateway
 
 1. Once you’re in the **semantic-caching.ipynb** file, take a moment to review each session and read its description.
 
-8. Scroll down to **Initialize notebook variables**. 
+1. Scroll down to **Initialize notebook variables**. 
 Enter the following details:
 
    - resource_group_name: **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**

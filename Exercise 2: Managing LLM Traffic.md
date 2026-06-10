@@ -28,7 +28,7 @@ In this task, you will deploy APIM and Microsoft Foundry endpoints, set up model
 
      ![](./media/e2t1p1.png)
 
-8. Scroll down to **Initialize notebook variables** and enter the following details:
+1. Scroll down to **Initialize notebook variables** and enter the following details:
 
    - resource_group_name: **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
 
@@ -56,45 +56,45 @@ In this task, you will deploy APIM and Microsoft Foundry endpoints, set up model
    >
    >![](./media/apim-p2t1p2-new.png)
 
-2. Next, go to **Verify the Azure CLI and the connected Azure subscription** and click on Run. This ensures the commands will run in the correct Azure subscription and that we have permissions to create resources.
+1. Next, go to **Verify the Azure CLI and the connected Azure subscription** and click on Run. This ensures the commands will run in the correct Azure subscription and that we have permissions to create resources.
 
    ![](./media/ver-e2t1.png)
    
-3. Run the cell **Create deployment using 🦾 Bicep**. This cell automates the creation of APIM, Microsoft Foundry endpoints, and model deployments so that the environment is consistent and reproducible.
+1. Run the cell **Create deployment using 🦾 Bicep**. This cell automates the creation of APIM, Microsoft Foundry endpoints, and model deployments so that the environment is consistent and reproducible.
 
    ![](./media/deploy-e2t1.png)
 
    >**Note:** If you encounter any errors, wait a few minutes and then re-execute the cell.
 
-4. Run the cell **Get the deployment outputs**. This retrieves URLs, keys, and Application Insights names that are needed to interact with the deployed AI endpoints.
+1. Run the cell **Get the deployment outputs**. This retrieves URLs, keys, and Application Insights names that are needed to interact with the deployed AI endpoints.
 
    ![](./media/outputs-e2t1.png)
    
-5. Run the cell **Test the API using a direct HTTP call**. Simulate real API requests to ensure that the token metrics are emitted correctly and that the agent responds as expected.
+1. Run the cell **Test the API using a direct HTTP call**. Simulate real API requests to ensure that the token metrics are emitted correctly and that the agent responds as expected.
 
    ![](./media/test-e2t1.png)
 
    ![](./media/test-e2t1(1).png)
 
-6. Run the cell **Execute multiple runs for each subscription using the Microsoft Foundry Python SDK**. Verify that metrics are tracked consistently across multiple subscriptions and API keys using the official Microsoft Foundry SDK.
+1. Run the cell **Execute multiple runs for each subscription using the Microsoft Foundry Python SDK**. Verify that metrics are tracked consistently across multiple subscriptions and API keys using the official Microsoft Foundry SDK.
 
    ![](./media/execute-e2t1.png)
 
    ![](./media/execute-e2t1(1).png)
 
-7. Run the cell **Analyze Application Insights custom metrics with a KQL query**, this Query and extract token usage data to monitor consumption and identify patterns.
+1. Run the cell **Analyze Application Insights custom metrics with a KQL query**, this Query and extract token usage data to monitor consumption and identify patterns.
 
     ![](./media/apim-may26-e2t2p2.png)
 
     >**Note:** If you get an error or the table doesn’t appear, wait for few minutes and execute the cell again.
 
-8. Run the cell **Plot the custom metrics results**, this visualizes token usage over time to see trends, spikes, or anomalies.
+1. Run the cell **Plot the custom metrics results**, this visualizes token usage over time to see trends, spikes, or anomalies.
 
     ![](./media/apim-may26-e2t2p3.png)
 
     >**Note:** The results you see may vary from the screenshot shown above.
 
-9. Next, **See the metrics on the Azure Portal**. Validate the token consumption visually for each subscription in Application Insights for easier monitoring.
+1. Next, **See the metrics on the Azure Portal**. Validate the token consumption visually for each subscription in Application Insights for easier monitoring.
     
     ![](./media/API-gateway-image34.png)
 
@@ -139,7 +139,7 @@ In this task, you will deploy APIM, Microsoft Foundry endpoints, and model subsc
 
    ![](./media/e2t2p1.png)
 
-8. Scroll down to **Initialize notebook variables** and enter the following details:
+1. Scroll down to **Initialize notebook variables** and enter the following details:
 
    - resource_group_name: **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
 
@@ -171,27 +171,27 @@ In this task, you will deploy APIM, Microsoft Foundry endpoints, and model subsc
    
    ![](./media/ver-e2t2.png)
 
-2. Run the cell **Create Deployment Using Bicep**. Deploy APIM, Microsoft Foundry endpoints, and model subscriptions using Bicep. Automates resource provisioning and writes parameters to params.json.
+1. Run the cell **Create Deployment Using Bicep**. Deploy APIM, Microsoft Foundry endpoints, and model subscriptions using Bicep. Automates resource provisioning and writes parameters to params.json.
 
    ![](./media/deploy-e2t2.png)
 
    >**Note:** If you encounter any errors, wait a few minutes and then re-execute the cell.
 
-3. Run the cell **Get Deployment Outputs**. Retrieve APIM Service ID, API Gateway URL, subscription keys, and other deployment outputs. These values are required for testing and API calls.
+1. Run the cell **Get Deployment Outputs**. Retrieve APIM Service ID, API Gateway URL, subscription keys, and other deployment outputs. These values are required for testing and API calls.
   
    ![](./media/outputs-e2t2.png)
 
-4. Run the cell **Test API Using Direct HTTP Calls**. Send repeated requests to the deployed AI endpoint using Python requests. Monitor response time, status codes, and token usage to verify token limiting behavior.
+1. Run the cell **Test API Using Direct HTTP Calls**. Send repeated requests to the deployed AI endpoint using Python requests. Monitor response time, status codes, and token usage to verify token limiting behavior.
 
    ![](./media/test-e2t2.png)
 
-5. Run the cell **Analyze Token Rate limiting results**. Convert API run results into a DataFrame and plot tokens per request. Helps visualize rate limiting and identify when 429 errors occur.
+1. Run the cell **Analyze Token Rate limiting results**. Convert API run results into a DataFrame and plot tokens per request. Helps visualize rate limiting and identify when 429 errors occur.
 
    ![](./media/analyze-e2t2.png)
 
    >**Note:** Result you get may vary from the image above.
 
-6. Run the cell **Test the API Using Microsoft Foundry Python SDK**. Send requests using the Microsoft Foundry SDK to confirm retries and proper handling of token limits. Observes consistent behavior across SDK calls.
+1. Run the cell **Test the API Using Microsoft Foundry Python SDK**. Send requests using the Microsoft Foundry SDK to confirm retries and proper handling of token limits. Observes consistent behavior across SDK calls.
 
    ![](./media/test2-e2t2.png)
 

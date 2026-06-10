@@ -205,29 +205,29 @@ In this task, you will create and apply a custom content filter to the GPT-4o-mi
 
     ![](./media/apim-may26-e5t2p2.png)
 
-6. Copy the **Target URI (1)** and **Key (2)** and store them in a Notepad file, as they will be required in the next step.
+1. Copy the **Target URI (1)** and **Key (2)** and store them in a Notepad file, as they will be required in the next step.
 
     ![](./media/gpt4o-e5t2(1).png)
 
-7. Open VS Code, navigate to the **labs (1)** folder, select **ai_request (2)**, and then open the **ai_request.py (3)** file.
+1. Open VS Code, navigate to the **labs (1)** folder, select **ai_request (2)**, and then open the **ai_request.py (3)** file.
 
      ![](./media/ai_request-e5t2.png)
 
-9. Kindly paste the **URL (1)** and **API key** with the values you copied in the earlier step and then press **Ctrl + S** to save the changes.
+1. Kindly paste the **URL (1)** and **API key** with the values you copied in the earlier step and then press **Ctrl + S** to save the changes.
 
     ![](./media/ex5-t2content8(1).png)
 
-12. In VS Code, right-click on the **ai_request (1)** folder and select **Open in Integrated Terminal (2)**.
+1. In VS Code, right-click on the **ai_request (1)** folder and select **Open in Integrated Terminal (2)**.
 
     ![](./media/ai_request-e5t2(2).png)
     
-14. Run the script to test the request:
+1. Run the script to test the request:
 
      ```
      python ai_request.py
      ```   
 
-15. Check the results printed in the console.
+1. Check the results printed in the console.
 
     ![](./media/ex5-t2content8.png)
 

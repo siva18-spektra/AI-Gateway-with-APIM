@@ -6,11 +6,11 @@
 
 Contoso Ltd. requires a scalable solution to efficiently manage increasing AI traffic across multiple regions. To ensure high availability, optimal performance, and consistent user experience, the organization is implementing intelligent traffic management using Azure API Management (APIM).
 
-In this exercise, you will configure load balancing, model routing, and session affinity to optimize and control AI request handling across Microsoft Foundry-hosted model endpoints.
+In this exercise, you will configure load balancing, model routing, and session affinity to optimize and control AI request handling across Microsoft Foundry services.
 
 ## Lab Overview
 
-In this exercise, you will learn how to efficiently distribute and manage AI traffic across multiple Microsoft Foundry model endpoints backends using Azure API Management (APIM). You will configure load balancing to route requests between multiple AI endpoints for improved performance and resilience, set up model routing to direct user requests to specific AI models based on task requirements, and implement session affinity to ensure consistent responses across multi-turn conversations. Using Visual Studio Code and Bicep templates, you’ll deploy multi-region Azure resources, configure APIM for intelligent traffic management, and validate that requests are properly balanced, routed, and maintained across sessions.
+In this exercise, you will learn how to efficiently distribute and manage AI traffic across multiple Azure OpenAI backends in Microsoft Foundry using Azure API Management (APIM). You will configure load balancing to route requests between multiple AI endpoints for improved performance and resilience, set up model routing to direct user requests to specific AI models based on task requirements, and implement session affinity to ensure consistent responses across multi-turn conversations. Using Visual Studio Code and Bicep templates, you’ll deploy multi-region Azure resources, configure APIM for intelligent traffic management, and validate that requests are properly balanced, routed, and maintained across sessions.
 
 ## Lab Objectives
 In this exercise, you will be performing the following tasks:
@@ -97,15 +97,15 @@ Here’s the architecture diagram to help you better understand the scenario.
 
    ![](./media/ex1-t1p6.png)
 
-9. Once the required packages are installed, from the left navigation pane, select **Explorer (1)**, then expand the **lab (2)** folder and **backend-pool-load-balancing (3)**, and finally click on **backend-pool-load-balancing.ipynb (4)**.
+1. Once the required packages are installed, from the left navigation pane, select **Explorer (1)**, then expand the **lab (2)** folder and **backend-pool-load-balancing (3)**, and finally click on **backend-pool-load-balancing.ipynb (4)**.
 
    ![](./media/API-gateway-image3.png)
 
-6. Once you’re in the **backend-pool-load-balancing.ipynb** file, take a moment to review each section and read its description. You will see how we deploy multiple AI endpoints, configure API Management for intelligent routing, and test load balancing and failover, giving you a clear understanding of how APIM manages AI traffic across regions.
+1. Once you’re in the **backend-pool-load-balancing.ipynb** file, take a moment to review each section and read its description. You will see how we deploy multiple AI endpoints, configure API Management for intelligent routing, and test load balancing and failover, giving you a clear understanding of how APIM manages AI traffic across regions.
 
-7. Now, you will run each cell in the notebook one by one, following the instructions and observing the outputs for each step.
+1. Now, you will run each cell in the notebook one by one, following the instructions and observing the outputs for each step.
 
-8. Scroll down to **Initialize notebook variables** and enter the following details:
+1. Scroll down to **Initialize notebook variables** and enter the following details:
 
    - resource_group_name: **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
 
@@ -143,11 +143,11 @@ Here’s the architecture diagram to help you better understand the scenario.
 
    ![](./media/E1T1P171.png)
 
-9. Go to **Verify the Azure CLI and the connected Azure subscription**. Click on **Run**, in this section, we check that the Azure CLI is installed, up-to-date, and connected to your subscription. This ensures we can deploy and manage resources in your Azure account. Review the output.
+1. Go to **Verify the Azure CLI and the connected Azure subscription**. Click on **Run**, in this section, we check that the Azure CLI is installed, up-to-date, and connected to your subscription. This ensures we can deploy and manage resources in your Azure account. Review the output.
 
     ![](./media/API-gateway-image6.png)
 
-10. Run the **Create deployment using 🦾 Bicep** cell. Here, we use Bicep to define and deploy all necessary Azure resources, including the AI endpoints and APIM service. Running this sets up the infrastructure needed for the lab.
+1. Run the **Create deployment using 🦾 Bicep** cell. Here, we use Bicep to define and deploy all necessary Azure resources, including the AI endpoints and APIM service. Running this sets up the infrastructure needed for the lab.
 
      ![](./media/deploy-e1t1.png)
 
@@ -186,23 +186,23 @@ Here’s the architecture diagram to help you better understand the scenario.
 
    ![](./media/ex1-azport(4).png)
     
-12. Now, go back to the VS Code and run the cell **Get the deployment outputs**. This section retrieves key information from the deployment, such as API URLs, subscription keys, and resource IDs. We use these outputs to connect and test the AI endpoints in later steps.
+1. Now, go back to the VS Code and run the cell **Get the deployment outputs**. This section retrieves key information from the deployment, such as API URLs, subscription keys, and resource IDs. We use these outputs to connect and test the AI endpoints in later steps.
 
     ![](./media/outputs-e1t1.png)
     
-14. Run the **Test the API using a direct HTTP call** cell to send multiple requests to the APIM endpoint. Observe the response headers, specifically x-ms-region, to verify which Microsoft Foundry backend region handles each request. This demonstrates APIM's load-balanced pool behavior in action.
+1. Run the **Test the API using a direct HTTP call** cell to send multiple requests to the APIM endpoint. Observe the response headers, specifically x-ms-region, to verify which Microsoft Foundry backend region handles each request. This demonstrates APIM's load-balanced pool behavior in action.
 
       ![](./media/ex1-t1p7.png)
 
       ![](./media/ex1-t1p7(1).png)
 
-15. Run the cell **Analyze Load Balancing results**. In this section, we analyze the load balancing results to see how traffic is distributed across the AI endpoints. The priority 1 backend handles requests first, and once it reaches its limit, traffic is shared between the two priority 2 backends.
+1. Run the cell **Analyze Load Balancing results**. In this section, we analyze the load balancing results to see how traffic is distributed across the AI endpoints. The priority 1 backend handles requests first, and once it reaches its limit, traffic is shared between the two priority 2 backends.
 
       ![](./media/e1t1p17.png)
 
       >**Note:** The results you see may differ from the screenshot shown above.
 
-16. Run the cell **Test the API using the Azure OpenAI Python SDK**. In this section, we test the deployed AI endpoints using the Azure OpenAI Python SDK. This ensures that the API requests work correctly and responses are received, regardless of which backend region handles them.
+1. Run the cell **Test the API using the Azure OpenAI Python SDK**. In this section, we test the deployed AI endpoints using the Azure OpenAI Python SDK. This ensures that the API requests work correctly and responses are received, regardless of which backend region handles them.
 
     ![](./media/e1t1p21.png)
 
@@ -222,7 +222,7 @@ In this task, you will configure APIM to route incoming requests to the appropri
 
    ![](./media/e1t2p1.png)
 
-8. Scroll down to **Initialize notebook variables** and enter the following details:
+1. Scroll down to **Initialize notebook variables** and enter the following details:
 
    - resource_group_name: **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
 
@@ -269,24 +269,24 @@ In this task, you will configure APIM to route incoming requests to the appropri
    >
    >![](./media/apim-p2t1p2-new.png)
 
-2. Run the cell **Verify Azure CLI and Subscription**. Checks that Azure CLI is connected and retrieves current user, tenant, and subscription info.
+1. Run the cell **Verify Azure CLI and Subscription**. Checks that Azure CLI is connected and retrieves current user, tenant, and subscription info.
 At the end, you know the deployment will run in the correct subscription.
 
    ![](./media/e1t2p5(2).png)
    
-4. Run the cell **Create Deployment using Bicep**. Creates the resource group if needed, writes params.json, and deploys resources using Bicep.
+1. Run the cell **Create Deployment using Bicep**. Creates the resource group if needed, writes params.json, and deploys resources using Bicep.
 At the end, APIM, AI services, and model routing are provisioned.
 
    ![](./media/deploy-e1t2.png)
 
    >**Note**: If you encounter any errors, wait a few minutes and then re-execute the cell.
 
-6. Run the cell **Get Deployment Outputs**. Fetches outputs like APIM URLs, subscription keys, and workspace IDs from the deployment.
+1. Run the cell **Get Deployment Outputs**. Fetches outputs like APIM URLs, subscription keys, and workspace IDs from the deployment.
 At the end, all resource identifiers and API keys are available for testing the deployed services.
 
     ![](./media/outputs-e1t2.png)
    
-8. Run the cell **Test the API using Azure OpenAI Python SDK**. Connects to APIM and sends messages to multiple models to verify routing and responses.
+1. Run the cell **Test the API using Azure OpenAI Python SDK**. Connects to APIM and sends messages to multiple models to verify routing and responses.
 
     ![](./media/sdk-e1t2.png)
 
